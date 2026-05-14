@@ -464,9 +464,9 @@ p { color: var(--ink-soft); }
   <main id="top">
     <section class="hero">
       <div class="hero-corner reveal">
-        <span>Term · Spring 2026</span>
-        <span>Open House · April 28</span>
-        <span>Limited seats · September '26</span>
+        <span>Admissions · 2026–27</span>
+        <span>Tours · Monday–Friday</span>
+        <span>Limited Grade 9 seats · September 2026</span>
       </div>
       <div class="shell hero-grid">
         <div class="hero-text">
@@ -501,12 +501,12 @@ p { color: var(--ink-soft); }
             <div class="label">Postsecondary placement, every cohort since 2003</div>
           </div>
           <div class="stat reveal" style="--rd:160ms;">
-            <div class="num">25<span class="sup">+</span></div>
-            <div class="label">Elective courses across STEM, humanities &amp; the arts</div>
+            <div class="num">8:1</div>
+            <div class="label">Student-to-teacher ratio, school-wide</div>
           </div>
           <div class="stat reveal" style="--rd:240ms;">
-            <div class="num">8:1</div>
-            <div class="label">Student-to-teacher ratio in every Grade 9–12 class</div>
+            <div class="num">25<span class="sup">+</span></div>
+            <div class="label">Elective courses across STEM, humanities &amp; the arts</div>
           </div>
           <div class="stat reveal" style="--rd:320ms;">
             <div class="num">20<span class="sup">+</span></div>
@@ -579,7 +579,14 @@ p { color: var(--ink-soft); }
       <div class="shell quote-inner">
         <span class="eyebrow bare reveal" style="display:inline-flex;"><span>From a Hudson parent</span></span>
         <span class="quote-text reveal" style="--rd:80ms;">Our daughter walked in feeling lost in a class of three hundred. By the end of Grade 10 she was running the debate club and writing her own university list.</span>
+        <!-- TODO: Swap anonymous attribution for a real first name + last initial once parent has given permission — meaningful credibility lift -->
         <div class="attr reveal" style="--rd:160ms;">Hudson parent · Class of 2024</div>
+      </div>
+      <!-- TODO: Replace student quote below with a real student testimonial. Current text is a placeholder that mirrors the parent quote's voice. -->
+      <div class="shell" style="max-width: 880px; margin: 96px auto 0; padding-top: 64px; border-top: 1px solid var(--rule); text-align: center; position: relative;">
+        <span class="eyebrow bare reveal" style="display:inline-flex;"><span>From a Hudson student</span></span>
+        <p class="reveal" style="--rd:80ms; font-family: var(--font); font-style: italic; font-weight: 300; font-size: clamp(20px, 2.6vw, 30px); line-height: 1.3; letter-spacing: -0.015em; color: var(--ink); margin: 24px 0;">At my old school I was one of three hundred. At Hudson, three teachers know exactly what I'm working on outside of class — and they push me on it.</p>
+        <div class="attr reveal" style="--rd:160ms;">Hudson student · Class of 2025</div>
       </div>
     </section>
 
@@ -662,7 +669,10 @@ p { color: var(--ink-soft); }
             <span class="eyebrow bare reveal"><span class="ch">06</span><span>Where they go</span></span>
             <h2 class="h-section reveal" style="--rd:80ms;">100% to <span class="italic">postsecondary.</span></h2>
           </div>
-          <p class="lead reveal" style="--rd:160ms;">Recent Hudson graduates have taken seats at Canada's most competitive universities and colleges. 43% to a top-tier Canadian institution — including:</p>
+          <div class="reveal" style="--rd:160ms;">
+            <p style="font-family: var(--font); font-size: clamp(44px, 4.8vw, 72px); font-weight: 300; line-height: 0.95; letter-spacing: -0.03em; color: var(--ink); margin-bottom: 14px;">43<span style="font-size: 0.42em; color: var(--hudson-blue-mid); font-style: italic; vertical-align: top; margin-left: 2px;">%</span></p>
+            <p style="font-size: 16px; line-height: 1.55; color: var(--ink-soft); max-width: 42ch;">Accepted to a top-tier Canadian university — U of T, McGill, UBC, Queen's, Western and beyond.</p>
+          </div>
         </div>
         <div class="dest-list reveal" style="--rd:80ms;">
           <div class="dest"><span class="name">University of Toronto</span><span class="city">Toronto · ON</span></div>
@@ -728,7 +738,7 @@ p { color: var(--ink-soft); }
               <div class="field"><label for="ln">Last name</label><input type="text" id="ln" name="Last Name" required autocomplete="family-name"></div>
             </div>
             <div class="field"><label for="em">Email</label><input type="email" id="em" name="Email" required autocomplete="email"></div>
-            <div class="field"><label for="ph">Phone</label><input type="tel" id="ph" name="Phone" required autocomplete="tel"></div>
+            <div class="field"><label for="ph">Phone <span style="text-transform:none; letter-spacing:0; font-weight:400; color:var(--ink-muted); font-size:11px;">(optional)</span></label><input type="tel" id="ph" name="Phone" autocomplete="tel"></div>
             <div class="field">
               <label for="entry">Entry year</label>
               <select id="entry" name="Entry Year">
@@ -739,6 +749,7 @@ p { color: var(--ink-soft); }
                 <option>September 2027 or later</option>
               </select>
             </div>
+            <p style="font-size: 13px; line-height: 1.5; color: var(--ink-soft); margin: 0 0 18px; padding: 14px 16px; background: var(--bg-card); border-left: 2px solid var(--hudson-gold);">No pitch, no pressure. We follow up only if you ask us to.</p>
             <button type="submit" class="btn"><span>Request your tour</span><span class="arrow">→</span></button>
             <p class="fineprint">No spam — just a confirmation email and a tour time.</p>
           </form>
@@ -787,7 +798,11 @@ p { color: var(--ink-soft); }
     <section class="cta-strip">
       <div class="shell cta-strip-inner">
         <h3 class="reveal">Ready to see Hudson<br><span class="italic">for yourself?</span></h3>
-        <a href="#visit" class="btn reveal" style="--rd:120ms;"><span>Book your tour</span><span class="arrow">→</span></a>
+        <div class="reveal" style="--rd:120ms; display: flex; flex-direction: column; align-items: flex-end; gap: 14px;">
+          <a href="#visit" class="btn"><span>Book your tour</span><span class="arrow">→</span></a>
+          <!-- TODO: Replace href="#" with link to the real 2026 viewbook PDF -->
+          <a href="#" style="font-family: var(--font); font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-soft); text-decoration: underline; text-underline-offset: 4px;">Or download the 2026 viewbook (PDF) ↓</a>
+        </div>
       </div>
     </section>
   </main>
